@@ -2,7 +2,7 @@ The file describes the main differences between the two versions of the data lib
 
 1) We re-estimated our CBOW model. This re-estimation reflects improvements in the spell-checking of our on-line job ad text, which was an input into the CBOW model estimation. Previously, our on-line job ad text included words like 'eventsparticipatingin,' 'managementadaptabilitystress,' and 'servicemanagementretail.' We have spell-checked these words. Removal of words like this alters the output of the estimation of the CBOW model.  
 
-2) Within the list of words associated with the Spitz-Oener nonroutine manual task, we removed the word "service."  We did so for two reasons. First, something we didn’t appreciate until recently, in many cases “service” referred not to a task the worker was expected to perform, but instead to the employer's line of business (e.g., “we are a financial service firm”). Second, the single word “service” represented a large fraction, slightly more than half, of the mentions of nonroutine manual words.
+2) Within the list of words associated with the Spitz-Oener nonroutine manual task, we removed the word "service."  We did so for two reasons. First, something we did not appreciate until recently, in many cases "service" referred not to a task the worker was expected to perform, but instead to the employer's line of business (e.g., "we are a financial service firm"). Second, the single word "service" represented a large fraction, slightly more than half, of the mentions of nonroutine manual words.
 
 3) Within the list of technologies we searched for, we added eight: CNC, IBM 5520, POS (Point of Sale technologies), Sabre, Vydec, Xerox 630, Xerox 800, and Xerox 860.
 
