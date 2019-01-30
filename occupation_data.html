@@ -1,0 +1,109 @@
+<title> Data Page </title>
+
+<style type="text/css">
+<!--
+A{text-decoration:none}
+-->
+<!--
+body{
+font-family: Helvetica, Arial, sans-serif ; font-size:11.0pt;
+   min-width:1130px; 
+   _width: expression( document.body.clientWidth > 1130 ? "1130px" : "auto" ); 
+}
+-->
+   .more {
+      display: none;
+      }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #18b018;
+      padding-left: 42px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+       }
+</style>
+<script>
+function change(id,vis){
+document.getElementById (id).style.display=vis;
+}
+</script>
+<body link="#0076EB" vlink="#0076EB" alink="#0076EB">
+
+<h2>Data Library on Occupational Characteristics </h2>
+
+<br> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This page provides access to and explains the construction of the datasets used in "The <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Evolving U.S. Occupational Structure" and "New Technologies and the Labor Market." These<br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; datasets were constructed from text originally published in the Boston Globe, New York Times,<br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and Wall Street Journal. The datasets contain information on occupations'  skill requirements,<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; technology usage, work activities, work styles, and other job characteristics, between 1940<br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and 2000. <br> 
+
+<br>
+
+<div id="data"></div>
+<h3> Downloadable Data </h3>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  A) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_job_title_year.zip"> By job title and year</a> (338MB)  <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  B) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_job_title.zip"> By job title </a>  (268MB) <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  C) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_soc_code_year.dta"> By SOC code and year</a> (57MB)  <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  D) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_soc_code.dta"> By SOC code </a>  (1.3MB) <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  E) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_occ_code_year.dta"> By OCC code and year</a> (37MB)  <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  F) <a href="http://ssc.wisc.edu/~eatalay/apst/data_by_occ_code.dta"> By OCC code </a>  (0.9MB) <br> <span style="display:block;margin-bottom:2px;"></span>
+
+<br>
+
+<div id="documentation"></div>
+<h3>  Documentation </h3>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  1) <a href="http://ssc.wisc.edu/~eatalay/apst/apst_codebook.pdf"> Codebook/Overview </a> of the dataset <br> <span style="display:block;margin-bottom:2px;"></span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  2) <a href="http://ssc.wisc.edu/~eatalay/apst/apst_cleaning.pdf"> Description </a> of the initial text cleaning  <br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/initial_cleaning.ipynb"> Python Notebook </a>  related to this step.
+<br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   3) <a href="http://ssc.wisc.edu/~eatalay/apst/apst_lda.pdf"> Details </a> of the LDA procedure to classify ads as jobs ads vs. other types of ads <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://ssc.wisc.edu/~eatalay/apst/lda_results.xlsx"> LDA </a> results <br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/LDA.ipynb"> Python Notebook </a> related to this step.
+
+<br> <span style="display:block;margin-bottom:2px;"></span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  4) <a href="http://ssc.wisc.edu/~eatalay/apst/apst_titles.pdf"> Details </a> of the procedure to discern the job title, boundaries between ads <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  A <a href="http://ssc.wisc.edu/~eatalay/apst/TitleBase.txt"> list </a> of job title words.
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/structured_data.ipynb"> Python Notebook</a> related to this step.  <span style="display:block;margin-bottom:2px;"></span> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5) <a href="http://ssc.wisc.edu/~eatalay/apst/apst_mapping.xlsx"> Mapping </a> between occupational characteristics and words/phrases <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <a href="http://ssc.wisc.edu/~eatalay/apst/soc_to_job_title_mapping.xlsx"> Mapping </a> between job titles, SOC codes, and OCC codes <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; An <a href="http://ssc.wisc.edu/~eatalay/apst/apst_mapping.pdf"> explanation </a> for these mappings <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/CBOW.ipynb"> Python Notebook</a>: estimating the CBOW model <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/assign_SOC.ipynb"> Python Notebook</a>: retrieving SOC codes from the CBOW model. <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<br> <br> <span style="display:block;margin-bottom:2px;"></span>
+<hr style="border-top: dashed 2.2px;" width="680"  align="left" />
+The downloadable data were last updated April 7, 2018. <br>
+For the pervious version of the data, available from July 1, 2017 to April 6, 2018, see the following <a href="https://ssc.wisc.edu/~eatalay/occupation_data_0717_to_0318.html "> link</a>. <br>
+For a summary of the differences between the first and second versions, see the following <a href="https://ssc.wisc.edu/~eatalay/apst/differences_between_versions.txt "> document</a>. <br>
+
+<script type="text/javascript">
+var sc_project=11427675;
+var sc_invisible=1;
+var sc_security="af5973f5";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free web stats"
+href="http://statcounter.com/" target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11427675/0/af5973f5/1/" alt="free web
+stats"></a></div></noscript>
+
+
+</html>

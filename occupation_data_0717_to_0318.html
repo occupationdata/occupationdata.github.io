@@ -1,0 +1,89 @@
+<title> Data Page </title>
+
+<style type="text/css">
+<!--
+A{text-decoration:none}
+-->
+<!--
+body{
+font-family: Helvetica, Arial, sans-serif ; font-size:11.0pt;
+   min-width:1130px; 
+   _width: expression( document.body.clientWidth > 1130 ? "1130px" : "auto" ); 
+}
+-->
+   .more {
+      display: none;
+      }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #18b018;
+      padding-left: 42px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+       }
+</style>
+<script>
+function change(id,vis){
+document.getElementById (id).style.display=vis;
+}
+</script>
+<body link="#0076EB" vlink="#0076EB" alink="#0076EB">
+
+<h2>Data Library on Occupational Characteristics </h2>
+
+<br> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; This page provides access to and explains the construction of the datasets used in "The Evolving <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U.S. Occupational Structure." These datasets were constructed from text originally published  <br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; in the Boston Globe, New York Times, and Wall Street Journal. The datasets contain information<br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  on occupations'  skill requirements, technology usage, work activities, work styles, and other  <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; job characteristics, between 1940 and 2000. <br> 
+
+<br>
+
+<div id="data"></div>
+<h3> Downloadable Data </h3>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  A) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/data_by_job_title_year.zip"> By job title and year</a> (318MB)  <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  B) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/data_by_job_title.zip"> By job title </a>  (253MB) <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  C) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/data_by_soc_code_year.zip"> By SOC code and year</a> (11MB)  <br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  D) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/data_by_soc_code.zip"> By SOC code </a>  (623KB) <br> <span style="display:block;margin-bottom:2px;"></span>
+
+<br>
+
+<div id="documentation"></div>
+<h3>  Documentation </h3>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  1) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_codebook.pdf"> Codebook/Overview </a> of the dataset <br> <span style="display:block;margin-bottom:2px;"></span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  2) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_cleaning.pdf"> Description </a> of the initial text cleaning  <br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/initial_cleaning.ipynb"> Python Notebook </a>  related to this step.
+<br> <span style="display:block;margin-bottom:2px;"></span>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   3) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_lda.pdf"> Details </a> of the LDA procedure to classify ads as jobs ads vs. other types of ads <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/lda_results.xlsx"> LDA </a> results <br> 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/LDA.ipynb"> Python Notebook </a> related to this step.
+
+<br> <span style="display:block;margin-bottom:2px;"></span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  4) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_titles.pdf"> Details </a> of the procedure to discern the job title, boundaries between ads <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  A <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/TitleBase.txt"> list </a> of job title words.
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/structured_data.ipynb"> Python Notebook</a> related to this step.  <span style="display:block;margin-bottom:2px;"></span> 
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5) <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_mapping.xlsx"> Mapping </a> between occupational characteristics and words/phrases <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/soc_to_job_title_mapping.xlsx"> Mapping </a> between job titles and SOC codes <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     An <a href="http://ssc.wisc.edu/~eatalay/apst_0717_to_0318/apst_mapping.pdf"> explanation </a> for these mappings <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/CBOW.ipynb"> Python Notebook</a>: estimating the CBOW model <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<a href="https://github.com/phaiptt125/newspaper_project/blob/master/data_cleaning/assign_SOC.ipynb"> Python Notebook</a>: retrieving SOC codes from the CBOW model. <br>   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<br> <br> <span style="display:block;margin-bottom:2px;"></span>
+<hr style="border-top: dashed 2.2px;" width="680"  align="left" />
+This is the version of the data library that was up to date until April 6, 2018. <br>
+The downloadable data on this page were last updated November 2, 2017. <br>
+A more recent version of the data were posted <a href="https://ssc.wisc.edu/~eatalay/occupation_data.html "> here </a> on April 7, 2018.
+
+</html>
