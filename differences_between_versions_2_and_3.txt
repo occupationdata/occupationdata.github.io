@@ -1,0 +1,11 @@
+The file describes the main differences between the second and third versions of the data library.
+
+1) We have retrieved additional variables (those with beginning with oth_). These variables correspond to various job characteristics, including: the hours of the job (both the total number and the actual schedule), whether the applicant is asked for a salary history.
+
+2) We have modified description (now called description_new), the variable which contains the job title of the ad. We have combined near-identical job title: removing words relating to salaries, locations, or hours that previously appeared in the job title field; standardizing acronyms; combining male-specific and female-specific job titles (e.g., host versus hostess). In addition, we have constructed a new variable, description_new_miss, which is equal to 1 if what appears in the job title field likely does not refer to an actual job title. For instance "vets" could conceivably refer to a veterinarian, but almost always in practice refers to a war veteran (i.e., asking war veterans to apply.)
+
+3) We have retrieved the SOC and OCC codes for job titles which appear only once in our data set. This drastically reduces the number of job ads for which the occupation code is missing.
+
+4) We have uploaded two more disaggregated versions of our data set, separating observations by their source (i.e., whether the ad appeared as a as a Boston Globe classified ad, as a Boston Globe display ad, as a New York Times classified ad, as a New York Times display ad, or as a Wall Street Journal classified ad.)
+
+5) We noticed that the text files that ProQuest delivered to us contained a small number of duplicate files (around 1.2 percent of the files delivered to us). We have removed the ads corresponding to these duplicate files.
